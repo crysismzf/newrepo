@@ -1,0 +1,209 @@
+body {
+font-family: "Open Sans";
+color: white;
+overflow-x: hidden;
+margin: 0px;
+/* margin-right: calc(-1 * (100vw - 100%)); */
+/* margin-left: calc(-1 * (100vw - 100%)); */
+/* margin-top: calc(-1 * (100vw - 100%)); */
+/* margin-bottom: calc(-1 * (100vw - 100%)); */
+background-color: black;
+}
+
+.ceiling {
+min-width: 100%;
+height: 50px;	
+background-color: #808080;
+position: fixed;
+}
+
+/* Верхняя часть сайта */
+header {
+border: solid 2px black;	
+width: 100%;
+height: 500px;
+background-color: black;
+background-image: url(../images/banner.jpg);
+background-size: cover;
+position: static;
+box-shadow: inset 0px 0px 200px 10px black;
+margin-bottom: 1px;
+}
+/* Класс для кнопки  */
+.start {
+border: solid 2px white;
+margin-left:100px;
+margin-top: 20px;
+padding: 15px 15px 15px 15px;
+display: inline-block;
+vertical-align: top;
+	}
+.start:hover {
+color: #20B2AA;
+border: solid 2px #20B2AA; 
+}
+
+/* Часть сайта с ссылками */
+nav {
+position: static;
+}
+
+/* Верхний текст блока с подчеркиванием */
+#main {
+width: 50%;
+border-bottom: solid 1px white;
+margin-left:100px;
+margin-top: 150px;
+}
+#mainForArticle {
+width: 50%;
+border-bottom: solid 1px white;
+margin-left:100px;
+margin-top: 50px;
+}
+/* Нижний текст блока для хедера */
+#next1 {
+width: 25%;
+margin-left:100px;
+margin-top: 10px;
+}
+/* Нижний текст блока для всех остальных */
+#next2 {
+width: 50%;
+margin-left:100px;
+margin-top: 10px;
+}
+/* Нижний текст блока для артикля */
+#next3 {
+width: 90%;
+margin-left:100px;
+margin-top: 10px;
+}
+/* Блоки-ссылки */
+.box1 {
+width: 40%;	
+height: 400px;
+background-color: black;
+background-image: url(../images/pic01.jpg);
+background-size: cover;
+box-shadow: inset 0px 0px 200px 10px #1E90FF;
+display: inline-block;
+margin: 0 -1px 1px -1px;
+vertical-align: top;
+}
+/* Анимация */
+.box1:hover {
+  box-shadow: none;
+}
+.box2 {
+width: 60%;	
+min-height: 400px;
+background-color: black;
+background-image: url(../images/pic02.jpg);
+background-size: cover;
+position: static;
+box-shadow: inset 0px 0px 200px 10px #8A2BE2;
+display: inline-block;
+margin: 0 -2px 1px -1px;
+vertical-align: top;
+}
+
+.box2:hover {
+  box-shadow: none;
+}
+/* Для планой анимации */
+/* transition: box-shadow 0.1s ease; */
+.box3 {
+width: 60%;	
+height: 400px;
+background-color: black;
+background-image: url(../images/pic03.jpg);
+background-size: cover;
+box-shadow: inset 0px 0px 200px 10px #B22222;
+display: inline-block;
+margin: 0 -1px 1px -1px;
+vertical-align: top;
+}
+
+.box3:hover {
+  box-shadow: none;
+}
+
+.box4 {
+width: 40%;	
+height: 400px;
+background-color: black;
+background-image: url(../images/pic04.jpg);
+background-size: cover;
+box-shadow: inset 0px 0px 200px 10px #FFA500;
+display: inline-block;
+margin: 0 -2px 1px -1px;
+vertical-align: top;
+}
+
+.box4:hover {
+  box-shadow: none;
+}
+
+.box5 {
+width: 40%;	
+height: 400px;
+background-color: black;
+background-image: url(../images/pic05.jpg);
+background-size: cover;
+box-shadow: inset 0px 0px 200px 10px #00FFFF;
+display: inline-block;
+margin: 0 -1px 1px -1px;
+vertical-align: top;
+}
+
+.box5:hover {
+  box-shadow: none;
+}
+
+.box6 {
+width: 60%;	
+height: 400px;
+background-color: black;
+background-image: url(../images/pic06.jpg);
+background-size: cover;
+box-shadow: inset 0px 0px 200px 10px #3CB371;
+display: inline-block;
+margin: 0 -2px -1px -1px;
+vertical-align: top;
+}
+
+.box6:hover {
+  box-shadow: none;
+}
+
+article {
+width: 100%;	
+background-color: #808080;
+vertical-align: top;
+position: static;
+display: inline-block;
+padding-bottom: 20px;
+}
+
+.connect {
+width: 70%;	
+height: 400px;
+background-color: black;
+border: solid 1px white;
+transition: box-shadow 1s ease;
+display: inline-block;
+margin: 0 -2px -1px -1px;
+vertical-align: top;
+}
+/* Подвал */
+footer {
+width: 100%;	
+min-height: 100px;
+border-top: solid 1px white;
+background-color: #808080;
+vertical-align: top;
+position: static;
+display: inline-block;
+padding: 40px 100px;
+}
