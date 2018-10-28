@@ -1,209 +1,417 @@
+﻿ {
+	margin: 0;
+	padding: 0;
+}
 body {
-font-family: "Open Sans";
-color: white;
-overflow-x: hidden;
-margin: 0px;
-/* margin-right: calc(-1 * (100vw - 100%)); */
-/* margin-left: calc(-1 * (100vw - 100%)); */
-/* margin-top: calc(-1 * (100vw - 100%)); */
-/* margin-bottom: calc(-1 * (100vw - 100%)); */
-background-color: black;
+	font-family: 'Open Sans', sans-serif;
+	color: white;
 }
-
-.ceiling {
-min-width: 100%;
-height: 50px;	
-background-color: #808080;
-position: fixed;
-}
-
-/* Верхняя часть сайта */
-header {
-border: solid 2px black;	
+.layer {
 width: 100%;
-height: 500px;
-background-color: black;
-background-image: url(../images/banner.jpg);
+height: 100%;
+background: url(../images/banner.jpg);
 background-size: cover;
-position: static;
-box-shadow: inset 0px 0px 200px 10px black;
-margin-bottom: 1px;
+position: fixed;
+top: 0px;
+left: 0px;
 }
-/* Класс для кнопки  */
+
+.layer-top{
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0px;
+left: 0px;
+background: rgba(36, 41, 67, 0.86);
+z-index: 1;
+}	
+
+header {
+width: 100%;
+height: 300px;
+top: 0px;
+left: 0px;
+position: absolute;
+z-index: 3;
+color: white;
+margin-top: 5%;
+}
+
 .start {
 border: solid 2px white;
-margin-left:100px;
-margin-top: 20px;
+margin: 15px 11% 0 1%;
 padding: 15px 15px 15px 15px;
 display: inline-block;
 vertical-align: top;
-	}
-.start:hover {
-color: #20B2AA;
-border: solid 2px #20B2AA; 
 }
 
-/* Часть сайта с ссылками */
-nav {
-position: static;
-}
-
-/* Верхний текст блока с подчеркиванием */
 #main {
-width: 50%;
+width: 78%;
 border-bottom: solid 1px white;
-margin-left:100px;
-margin-top: 150px;
+margin: 100px 11% 0 11%;
+z-index: 3;
 }
-#mainForArticle {
-width: 50%;
-border-bottom: solid 1px white;
-margin-left:100px;
-margin-top: 50px;
-}
-/* Нижний текст блока для хедера */
+
 #next1 {
 width: 25%;
-margin-left:100px;
-margin-top: 10px;
-}
-/* Нижний текст блока для всех остальных */
-#next2 {
-width: 50%;
-margin-left:100px;
-margin-top: 10px;
-}
-/* Нижний текст блока для артикля */
-#next3 {
-width: 90%;
-margin-left:100px;
-margin-top: 10px;
-}
-/* Блоки-ссылки */
-.box1 {
-width: 40%;	
-height: 400px;
-background-color: black;
-background-image: url(../images/pic01.jpg);
-background-size: cover;
-box-shadow: inset 0px 0px 200px 10px #1E90FF;
+margin: 15px 1% 0 11%;
+z-index: 3;
 display: inline-block;
-margin: 0 -1px 1px -1px;
-vertical-align: top;
 }
-/* Анимация */
-.box1:hover {
-  box-shadow: none;
+
+/* Текст в боксах */
+.element-container {
+display: flex;
+flex-direction: column;
+align-items: baseline;
+justify-content: center;
+box-sizing: border-box;
+padding-left: 5em;
+width: 100%;
+height: 100%;
+z-index: 3;
+}
+element-name {
+display: inline-block;
+font-size: 35px;
+z-index: 3;
+}
+
+.element-description {
+display: inline-block;
+border-top: 2px solid white;
+margin-top: 2vh;
+padding-top: 2vh;
+color: white;
+letter-spacing: 6px;
+z-index: 3;
+}
+/* Контейнер с боксами  */
+.contentBlock {
+margin-top: 500px;
+display: flex;
+flex-direction: column;
+width: 100%;
+color: white;
+font-family: 'Source Sans Pro', sans-seif;
+height: 1200px;
+margin-left: 0;
+margin-right: 0;
+}
+
+/* Три ряда с боксами */
+.elementRow1, .elementRow2, .elementRow3   {
+display: flex;
+flex-direction: row;
+height: 33.33%;
+width: 100%;
+}
+/* Боксы */
+.box1 {
+display: block;
+background: url(../images/pic01.jpg);
+background-position: center;
+background-size: cover;
+height: 100%;
+width: 40%;
+text-decoration: none;
+color: white;
+z-index: 1;
+}
+.elementLayer1 {
+position: relative;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: #6fc3df;
+opacity: .9;
+transition: 1s;
+z-index: 2;
 }
 .box2 {
-width: 60%;	
-min-height: 400px;
-background-color: black;
-background-image: url(../images/pic02.jpg);
+display: block;
+background: url(../images/pic02.jpg);
+background-position: center;
 background-size: cover;
-position: static;
-box-shadow: inset 0px 0px 200px 10px #8A2BE2;
-display: inline-block;
-margin: 0 -2px 1px -1px;
-vertical-align: top;
+height: 100%;
+width: 60%;
+text-decoration: none;
+color: white;
+z-index: 1;
 }
-
-.box2:hover {
-  box-shadow: none;
+.elementLayer2 {
+position: relative;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: #8d82c4;
+opacity: .9;
+transition: 1s;
+z-index: 2;
 }
-/* Для планой анимации */
-/* transition: box-shadow 0.1s ease; */
 .box3 {
-width: 60%;	
-height: 400px;
-background-color: black;
-background-image: url(../images/pic03.jpg);
+display: block;
+background: url(../images/pic03.jpg);
+background-position: center;
 background-size: cover;
-box-shadow: inset 0px 0px 200px 10px #B22222;
-display: inline-block;
-margin: 0 -1px 1px -1px;
-vertical-align: top;
+height: 100%;
+width: 40%;
+text-decoration: none;
+color: white;
+z-index: 1;
 }
-
-.box3:hover {
-  box-shadow: none;
+.elementLayer3 {
+position: relative;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: #ec8d81;
+opacity: .9;
+transition: 1s;
+z-index: 2;
 }
 
 .box4 {
-width: 40%;	
-height: 400px;
-background-color: black;
-background-image: url(../images/pic04.jpg);
+display: block;
+background: url(../images/pic04.jpg);
+background-position: center;
 background-size: cover;
-box-shadow: inset 0px 0px 200px 10px #FFA500;
-display: inline-block;
-margin: 0 -2px 1px -1px;
-vertical-align: top;
+height: 100%;
+width: 60%;
+text-decoration: none;
+color: white;
+z-index: 1;
 }
-
-.box4:hover {
-  box-shadow: none;
+.elementLayer4 {
+position: relative;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: #e7b788;
+opacity: .9;
+transition: 1s;
+z-index: 2;
 }
-
 .box5 {
-width: 40%;	
-height: 400px;
-background-color: black;
-background-image: url(../images/pic05.jpg);
+display: block;
+background: url(../images/pic05.jpg);
+background-position: center;
 background-size: cover;
-box-shadow: inset 0px 0px 200px 10px #00FFFF;
-display: inline-block;
-margin: 0 -1px 1px -1px;
-vertical-align: top;
+height: 100%;
+width: 60%;
+text-decoration: none;
+color: white;
+z-index: 1;
 }
-
-.box5:hover {
-  box-shadow: none;
+.elementLayer5 {
+position: relative;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: #8ea9e8;
+opacity: .9;
+transition: 1s;
+z-index: 2;
 }
 
 .box6 {
-width: 60%;	
-height: 400px;
-background-color: black;
-background-image: url(../images/pic06.jpg);
+display: block;
+background: url(../images/pic06.jpg);
+background-position: center;
 background-size: cover;
-box-shadow: inset 0px 0px 200px 10px #3CB371;
-display: inline-block;
-margin: 0 -2px -1px -1px;
-vertical-align: top;
+height: 100%;
+width: 40%;
+text-decoration: none;
+color: white;
+z-index: 1;
 }
-
-.box6:hover {
-  box-shadow: none;
+.elementLayer6 {
+position: relative;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: #87c5a4;
+opacity: .9;
+transition: 1s;
+z-index: 2;
 }
-
-article {
-width: 100%;	
-background-color: #808080;
-vertical-align: top;
-position: static;
-display: inline-block;
-padding-bottom: 20px;
+/* Анимация при наведении */
+.elementLayer1:hover, 
+.elementLayer2:hover, 
+.elementLayer3:hover, 
+.elementLayer4:hover, 
+.elementLayer5:hover, 
+.elementLayer6:hover {
+background: rgba(0, 0, 0, 0.2);
+transition: 1s;
+z-index: 1;
 }
-
-.connect {
-width: 70%;	
+.infoBox {
+position: relative;
 height: 400px;
-background-color: black;
-border: solid 1px white;
-transition: box-shadow 1s ease;
+width: 100%;
+background: #2a2f4a;
+z-index: 1;
+}
+.infoBoxTitle {
+margin: 100px 11% 0 11%;
+color: white;
+font-family: 'Source Sans Pro', sans-seif;
+border-bottom: 2px solid white;
+font-size: 1.75em;
+font-weight: 600;
+padding-bottom: 15px;
+padding-right: 10px;
 display: inline-block;
-margin: 0 -2px -1px -1px;
+}
+.infoBoxDicription {
+margin: 15px 11% 0 11%;
+color: white;
+font-family: 'Source Sans Pro', sans-seif;
+font-size: 1 em;
+padding-bottom: 15px;
+padding-right: 10px;
+display: inline-block;
+}	
+.startBottom {
+border: solid 2px white;
+margin: 15px 11% 0 11%;
+padding: 15px 15px 15px 15px;
+display: inline-block;
 vertical-align: top;
 }
-/* Подвал */
+/* Блок с обратной связью */
+.connection {
+position: relative;
+max-height: 480px;
+width: 100%;
+background: rgba(36, 41, 67);
+z-index: 1;
+border-bottom: 1px solid #2a2f4a;
+}
+/* Для левого блока (обратная связь) */
+.mesageCont {
+width: 50%;
+max-height: 480px;
+color: white;
+font-family: 'Source Sans Pro', sans-seif;
+padding-left: 20px;
+display: inline-block;
+vertical-align: top;
+}
+/* Для правого телефон, адрес и  тд. */
+.contact {
+max-width: 45%;
+height: 480px;
+color: white;
+font-family: 'Source Sans Pro', sans-seif;
+display: inline-block;
+border-left: solid 2px #2a2f4a;
+vertical-align: top;
+}
+.email,.Phone{
+width: 100%;
+height: 160px;
+color: white;
+font-family: 'Source Sans Pro', sans-seif;
+display: inline-block;
+border-bottom: solid 2px #2a2f4a;
+vertical-align: top;
+}
+
+
+.addres { 
+width: 100%; 
+height: 160px; 
+color: white; 
+font-family: 'Source Sans Pro', sans-seif; 
+display: inline-block;
+vertical-align: top;
+} 
+
+
+#text {
+width: 40%;
+font-size: 20px;
+padding: 6px 0 4px 10px;
+background: #2a2f4a;
+display: inline-block;
+vertical-align: top;
+margin: 2%;
+}
+textarea {
+width: 86%;
+height: 200px;
+font-size: 20px;
+padding: 6px 0 4px 10px;
+background: #2a2f4a;
+display: inline-block;
+vertical-align: top;
+margin: 2%;
+}
+.connextionName1 {
+width: 40%;	
+display: inline-block;
+vertical-align: top;
+margin: 2%;
+}
+.connextionName2 {
+width: 40%;	
+display: inline-block;
+vertical-align: top;
+margin: 10px 0 10px 3%;
+}
+.ButtomM1 {
+border: solid 2px white;
+margin: 15px 11% 15px 1%;
+padding: 15px 15px 15px 15px;
+display: inline-block;
+vertical-align: top;
+color: rgba(36, 41, 67);
+background: white;
+}
+
+.ButtomM2 {
+border: solid 2px white;
+margin: 15px 11% 0px 0px;
+padding: 15px 25px 15px 25px;
+display: inline-block;
+vertical-align: top;
+}
+
+.Info1 {
+padding: 25px 0 0 25px;	
+font-size: 1.35em;
+font-weight: 600;
+word-spacing: 15px;
+}
+.Info2 {
+padding: 10px 0 0 65px;	
+font-size: 1 em;
+}
+
 footer {
-width: 100%;	
-min-height: 100px;
-border-top: solid 1px white;
-background-color: #808080;
-vertical-align: top;
-position: static;
-display: inline-block;
-padding: 40px 100px;
+position: relative;
+height: 150px;
+width: 100%;
+background: rgba(36, 41, 67);
+z-index: 1;
 }
+.social {
+padding: 50px 0 0 50px;	
+font-size: 1.35em;
+color: white;
+font-weight: 600;
+word-spacing: 15px;
+}
+
+
+
+
+
