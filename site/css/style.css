@@ -1,11 +1,101 @@
 ﻿ {
 	margin: 0;
 	padding: 0;
+
 }
 body {
 	font-family: 'Open Sans', sans-serif;
 	color: white;
 }
+a {
+	 text-decoration: none;
+	 color: white;
+	 }
+a :hover {
+	color: #4682B4;
+		}
+ 
+
+	#zatemnenie {
+        background: rgba(36, 41, 67, 0.95);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+		z-index: 9;
+      }
+      #window {
+		display: flex;
+		height: 50%;
+		flex-direction: column;
+		align-items: baseline;
+		justify-content: center;
+		box-sizing: border-box; 
+        padding: 15px;
+        color: white;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+         }
+ .modalwin1 {
+		align-content: center;
+		margin: auto;
+		border-bottom: solid 2px #2a2f4a;
+		width: 20%;
+		height: 10%;
+		text-align: center;
+		display: inline-block;
+		}
+		.modalwin2 {
+		align-content: center;
+		margin: auto;
+		width: 20%;
+		height: 10%;
+		text-align: center;
+		display: inline-block;
+		}
+	.modalwin3 {
+		align-content: center;
+		margin: auto;
+		display: inline-block;
+		border: solid 2px white;
+		color: black;
+		background: white;
+		width: 20%;
+		text-align: center;
+		padding: 10px;
+		}
+	.modalwin4 {
+		align-content: center;
+		margin: auto;
+		display: inline-block;
+		border: solid 2px white;
+		color: black;
+		width: 20%;
+		text-align: center;
+		color: white;
+		padding: 10px;
+		}
+	
+		
+      #zatemnenie:target {display: block;}
+      .close {
+        display: inline-block;
+        color: white;
+        margin: 10px;
+        text-decoration: none;
+		position:fixed;
+		top: 0;
+		right: 0;
+		font-size: 2em;
+         }
+      
+/* Нижний слой для хеада*/
 .layer {
 width: 100%;
 height: 100%;
@@ -15,7 +105,7 @@ position: fixed;
 top: 0px;
 left: 0px;
 }
-
+/* Верхний слой для хэда */
 .layer-top{
 width: 100%;
 height: 100%;
@@ -25,6 +115,41 @@ left: 0px;
 background: rgba(36, 41, 67, 0.86);
 z-index: 1;
 }	
+/* Верхний блок с лого и меню */
+.menuConteiner {
+display: flex;
+flex-direction: row;
+align-items: baseline;
+justify-content: space-between;
+box-sizing: border-box;
+width: 100%;
+height: 45px;
+z-index: 2;	
+position: fixed;
+top: 0px;
+left: 0px;
+letter-spacing: 5px;
+}
+/* Логотип */
+.logo  {
+display: flex;
+flex-direction: row;
+color: black;
+background: white;
+padding: 5px;
+margin: 5px;
+}
+/* Меню */
+.menu  {
+display: flex;
+flex-direction: row;
+margin: 5px;
+padding: 5px;
+word-spacing: 30px;
+vertical-align: center;
+text-decoration: none;
+vertical-align: tope;
+}
 
 header {
 width: 100%;
@@ -36,7 +161,7 @@ z-index: 3;
 color: white;
 margin-top: 5%;
 }
-
+/* Кнопка в хэде */
 .start {
 border: solid 2px white;
 margin: 15px 11% 0 1%;
@@ -44,14 +169,14 @@ padding: 15px 15px 15px 15px;
 display: inline-block;
 vertical-align: top;
 }
-
+/* Верхний текс в хэде */
 #main {
 width: 78%;
 border-bottom: solid 1px white;
 margin: 100px 11% 0 11%;
 z-index: 3;
 }
-
+/* Нижний текст в хэде */
 #next1 {
 width: 25%;
 margin: 15px 1% 0 11%;
@@ -252,6 +377,7 @@ background: rgba(0, 0, 0, 0.2);
 transition: 1s;
 z-index: 1;
 }
+/* Часть с описанием */
 .infoBox {
 position: relative;
 height: 400px;
@@ -324,8 +450,6 @@ display: inline-block;
 border-bottom: solid 2px #2a2f4a;
 vertical-align: top;
 }
-
-
 .addres { 
 width: 100%; 
 height: 160px; 
@@ -334,8 +458,6 @@ font-family: 'Source Sans Pro', sans-seif;
 display: inline-block;
 vertical-align: top;
 } 
-
-
 #text {
 width: 40%;
 font-size: 20px;
@@ -395,7 +517,7 @@ word-spacing: 15px;
 padding: 10px 0 0 65px;	
 font-size: 1 em;
 }
-
+/* Подвал страницы */
 footer {
 position: relative;
 height: 150px;
