@@ -1,4 +1,4 @@
-﻿ {
+﻿ *{
 	margin: 0;
 	padding: 0;
 
@@ -7,93 +7,119 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	color: white;
 }
-a {
+/* Обычные ссылки */
+.normalA {
 	 text-decoration: none;
 	 color: white;
 	 }
-a :hover {
+.normalA :hover {
 	color: #4682B4;
 		}
+.elementLayer1 a,.elementLayer2 a, .elementLayer3 a,
+.elementLayer4 a, .elementLayer5 a, .elementLayer6 a {
+text-decoration: none;
+color: white;
+}
+/* Ссылки в модальном окне */
+.aForButtom1	{
+	text-decoration: none;
+	color: black;
+}
+/* Для кнопок с белым фоном */
+.aForButtom1 :hover {
+	color: #4682B4;
+	border: solid 2px #4682B4;
+}
+.aForButtom2	{
+	text-decoration: none;
+	color: white;
+}
+.aForButtom2 :hover {
+	color: #4682B4;
+	border: solid 2px #4682B4;
+}
  
-
-	#zatemnenie {
-        background: rgba(36, 41, 67, 0.95);
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: none;
-		z-index: 9;
-      }
-      #window {
-		display: flex;
-		height: 50%;
-		flex-direction: column;
-		align-items: baseline;
-		justify-content: center;
-		box-sizing: border-box; 
-        padding: 15px;
-        color: white;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        margin: auto;
-         }
- .modalwin1 {
-		align-content: center;
-		margin: auto;
-		border-bottom: solid 2px #2a2f4a;
-		width: 20%;
-		height: 10%;
-		text-align: center;
-		display: inline-block;
-		}
-		.modalwin2 {
-		align-content: center;
-		margin: auto;
-		width: 20%;
-		height: 10%;
-		text-align: center;
-		display: inline-block;
-		}
-	.modalwin3 {
-		align-content: center;
-		margin: auto;
-		display: inline-block;
-		border: solid 2px white;
-		color: black;
-		background: white;
-		width: 20%;
-		text-align: center;
-		padding: 10px;
-		}
-	.modalwin4 {
-		align-content: center;
-		margin: auto;
-		display: inline-block;
-		border: solid 2px white;
-		color: black;
-		width: 20%;
-		text-align: center;
-		color: white;
-		padding: 10px;
-		}
-	
-		
-      #zatemnenie:target {display: block;}
-      .close {
-        display: inline-block;
-        color: white;
-        margin: 10px;
-        text-decoration: none;
-		position:fixed;
-		top: 0;
-		right: 0;
-		font-size: 2em;
-         }
+/* Модальное окно */
+#shadowWindow {
+    background: rgba(36, 41, 67, 0.95);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+	z-index: 9;
+}
+#window {
+	display: flex;
+	height: 50%;
+	flex-direction: column;
+	align-items: baseline;
+	justify-content: center;
+	box-sizing: border-box; 
+    padding: 15px;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+     margin: auto;
+}
+.modalwin1 {
+	align-content: center;
+	margin: auto;
+	border-bottom: solid 2px #2a2f4a;
+	width: 20%;
+	height: 10%;
+	text-align: center;
+	display: inline-block;
+}
+.modalwin2 {
+	align-content: center;
+	margin: auto;
+	width: 20%;
+	height: 10%;
+	text-align: center;
+	display: inline-block;
+}
+.modalwin3 {
+	align-content: center;
+	margin: auto;
+	display: inline-block;
+	border: solid 2px white;
+	color: black;
+	background: white;
+	width: 20%;
+	text-align: center;
+	padding: 10px;
+}
+.modalwin4 {
+	align-content: center;
+	margin: auto;
+	display: inline-block;
+	border: solid 2px white;
+	color: black;
+	width: 20%;
+	text-align: center;
+	color: white;
+	padding: 10px;
+}
+#shadowWindow:target {display: block;}
+.close {
+    display: inline-block;
+    color: white;
+    margin-right: 20px;
+	margin-top: 20px;
+    text-decoration: none;
+	position:fixed;
+	top: 0;
+	right: 0;
+	font-size: 2em;
+}
+.close: hover {
+	color: #4682B4;
+ }
       
 /* Нижний слой для хеада*/
 .layer {
@@ -109,7 +135,7 @@ left: 0px;
 .layer-top{
 width: 100%;
 height: 100%;
-position: absolute;
+position: fixed;
 top: 0px;
 left: 0px;
 background: rgba(36, 41, 67, 0.86);
@@ -169,6 +195,7 @@ padding: 15px 15px 15px 15px;
 display: inline-block;
 vertical-align: top;
 }
+
 /* Верхний текс в хэде */
 #main {
 width: 78%;
@@ -415,7 +442,6 @@ vertical-align: top;
 /* Блок с обратной связью */
 .connection {
 position: relative;
-max-height: 480px;
 width: 100%;
 background: rgba(36, 41, 67);
 z-index: 1;
@@ -433,8 +459,7 @@ vertical-align: top;
 }
 /* Для правого телефон, адрес и  тд. */
 .contact {
-max-width: 45%;
-height: 480px;
+width: 45%;
 color: white;
 font-family: 'Source Sans Pro', sans-seif;
 display: inline-block;
@@ -466,6 +491,7 @@ background: #2a2f4a;
 display: inline-block;
 vertical-align: top;
 margin: 2%;
+color: white;
 }
 textarea {
 width: 86%;
@@ -476,6 +502,7 @@ background: #2a2f4a;
 display: inline-block;
 vertical-align: top;
 margin: 2%;
+color: white;
 }
 .connextionName1 {
 width: 40%;	
@@ -523,7 +550,6 @@ position: relative;
 height: 150px;
 width: 100%;
 background: rgba(36, 41, 67);
-z-index: 1;
 }
 .social {
 padding: 50px 0 0 50px;	
@@ -533,7 +559,44 @@ font-weight: 600;
 word-spacing: 15px;
 }
 
+@media (max-width: 768px) {
+		.box1,.box2,.box3,.box4,.box5,.box6{
+		width: 50%;
+		}
+		footer {
+		height: 80px;	
+		}
+		.social {
+		padding: 10px 0 0 10px;	
+		}
+		#main {
+		margin: 40px 11% 0 11%;
+		}
+}
+@media (max-width: 736px) {
 
-
-
-
+		body {
+		font-size: 10px;
+		}
+		header {
+		height: 200px;
+		}
+		.mesageCont {
+		width: 100%;
+		}
+		.contact {
+		width: 100%;
+		}
+		.contentBlock {
+		height: 900px;
+		}
+		textarea {
+		height: 100px;
+		}
+		#text {
+		width: 30%;
+		}
+		.contentBlock {
+		margin-top: 220px;
+		}
+}
