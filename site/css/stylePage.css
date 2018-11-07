@@ -1,0 +1,341 @@
+ *{
+	margin: 0;
+	padding: 0;
+
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+}
+/* Обычные ссылки */
+.normalA {
+	 text-decoration: none;
+	 color: white;
+	 }
+.normalA :hover {
+	color: #4682B4;
+		}
+
+/* Ссылки в модальном окне */
+.aForButtom1	{
+	text-decoration: none;
+	color: black;
+}
+/* Для кнопок с белым фоном */
+.aForButtom1 :hover {
+	color: #4682B4;
+	border: solid 2px #4682B4;
+}
+.aForButtom2	{
+	text-decoration: none;
+	color: white;
+}
+.aForButtom2 :hover {
+	color: #4682B4;
+	border: solid 2px #4682B4;
+}
+ 
+/* Модальное окно */
+#shadowWindow {
+    background: rgba(36, 41, 67, 0.95);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+	z-index: 9;
+}
+#window {
+	display: flex;
+	height: 50%;
+	flex-direction: column;
+	align-items: baseline;
+	justify-content: center;
+	box-sizing: border-box; 
+    padding: 15px;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+     margin: auto;
+}
+.modalwin1 {
+	align-content: center;
+	margin: auto;
+	border-bottom: solid 2px #2a2f4a;
+	width: 20%;
+	height: 10%;
+	text-align: center;
+	display: inline-block;
+}
+.modalwin2 {
+	align-content: center;
+	margin: auto;
+	width: 20%;
+	height: 10%;
+	text-align: center;
+	display: inline-block;
+}
+.modalwin3 {
+	align-content: center;
+	margin: auto;
+	display: inline-block;
+	border: solid 2px white;
+	color: black;
+	background: white;
+	width: 20%;
+	text-align: center;
+	padding: 10px;
+}
+.modalwin4 {
+	align-content: center;
+	margin: auto;
+	display: inline-block;
+	border: solid 2px white;
+	color: black;
+	width: 20%;
+	text-align: center;
+	color: white;
+	padding: 10px;
+}
+#shadowWindow:target {display: block;}
+.close {
+    display: inline-block;
+    color: white;
+    margin-right: 20px;
+	margin-top: 20px;
+    text-decoration: none;
+	position:fixed;
+	top: 0;
+	right: 0;
+	font-size: 2em;
+}
+.close: hover {
+	color: #4682B4;
+ }
+ 
+
+
+/* Верхний блок с лого и меню */
+.menuConteiner {
+display: flex;
+flex-direction: row;
+align-items: baseline;
+justify-content: space-between;
+box-sizing: border-box;
+width: 100%;
+height: 45px;
+z-index: 2;	
+position: fixed;
+top: 0px;
+left: 0px;
+letter-spacing: 5px;
+background: rgba(36, 41, 67);
+}
+/* Логотип */
+.logo  {
+display: flex;
+flex-direction: row;
+color: black;
+background: white;
+padding: 5px;
+margin: 5px;
+}
+/* Меню */
+.menu  {
+display: flex;
+flex-direction: row;
+margin: 5px;
+padding: 5px;
+word-spacing: 30px;
+vertical-align: center;
+text-decoration: none;
+vertical-align: tope;
+}
+
+/* Основная часть */
+img {
+max-width: 100%;
+height: auto;	
+}	
+.infoBox {
+position: relative;
+width: 100%;
+background: #2a2f4a;
+}
+.infoBoxTitle {
+margin: 100px 11% 0 11%;
+color: white;
+font-family: 'Source Sans Pro', sans-seif;
+border-bottom: 2px solid white;
+font-size: 1.75em;
+font-weight: 600;
+padding-bottom: 15px;
+padding-right: 10px;
+display: inline-block;
+}
+.infoBoxDicription {
+margin: 15px 11% 0 11%;
+color: white;
+font-family: 'Source Sans Pro', sans-seif;
+font-size: 1 em;
+padding-bottom: 15px;
+padding-right: 10px;
+display: inline-block;
+}	
+
+/* Блок с обратной связью */
+.connection {
+position: relative;
+width: 100%;
+background: rgba(36, 41, 67);
+border-bottom: 1px solid #2a2f4a;
+}
+/* Для левого блока (обратная связь) */
+.mesageCont {
+width: 50%;
+max-height: 480px;
+color: white;
+font-family: 'Source Sans Pro', sans-seif;
+padding-left: 20px;
+display: inline-block;
+vertical-align: top;
+}
+/* Для правого телефон, адрес и  тд. */
+.contact {
+width: 45%;
+color: white;
+font-family: 'Source Sans Pro', sans-seif;
+display: inline-block;
+border-left: solid 2px #2a2f4a;
+vertical-align: top;
+}
+.email,.Phone{
+width: 100%;
+height: 160px;
+color: white;
+font-family: 'Source Sans Pro', sans-seif;
+display: inline-block;
+border-bottom: solid 2px #2a2f4a;
+vertical-align: top;
+}
+.addres { 
+width: 100%; 
+height: 160px; 
+color: white; 
+font-family: 'Source Sans Pro', sans-seif; 
+display: inline-block;
+vertical-align: top;
+} 
+#text {
+width: 40%;
+font-size: 20px;
+padding: 6px 0 4px 10px;
+background: #2a2f4a;
+display: inline-block;
+vertical-align: top;
+margin: 2%;
+color: white;
+}
+textarea {
+width: 86%;
+height: 200px;
+font-size: 20px;
+padding: 6px 0 4px 10px;
+background: #2a2f4a;
+display: inline-block;
+vertical-align: top;
+margin: 2%;
+color: white;
+}
+.connextionName1 {
+width: 40%;	
+display: inline-block;
+vertical-align: top;
+margin: 2%;
+}
+.connextionName2 {
+width: 40%;	
+display: inline-block;
+vertical-align: top;
+margin: 10px 0 10px 3%;
+}
+.ButtomM1 {
+border: solid 2px white;
+margin: 15px 11% 15px 1%;
+padding: 15px 15px 15px 15px;
+display: inline-block;
+vertical-align: top;
+color: rgba(36, 41, 67);
+background: white;
+}
+
+.ButtomM2 {
+border: solid 2px white;
+margin: 15px 11% 0px 0px;
+padding: 15px 25px 15px 25px;
+display: inline-block;
+vertical-align: top;
+}
+
+.Info1 {
+padding: 25px 0 0 25px;	
+font-size: 1.35em;
+font-weight: 600;
+word-spacing: 15px;
+}
+.Info2 {
+padding: 10px 0 0 65px;	
+font-size: 1 em;
+}
+/* Подвал страницы */
+footer {
+position: relative;
+height: 150px;
+width: 100%;
+background: rgba(36, 41, 67);
+}
+.social {
+padding: 50px 0 0 50px;	
+font-size: 1.35em;
+color: white;
+font-weight: 600;
+word-spacing: 15px;
+}
+
+@media (max-width: 768px) {
+		
+		footer {
+		height: 80px;	
+		}
+		.social {
+		padding: 10px 0 0 10px;	
+		}
+		
+}
+@media (max-width: 736px) {
+
+		body {
+		font-size: 10px;
+		}
+		
+		.mesageCont {
+		width: 100%;
+		}
+		.contact {
+		width: 100%;
+		}
+		.contentBlock {
+		height: 900px;
+		}
+		textarea {
+		height: 100px;
+		}
+		#text {
+		width: 30%;
+		}
+		
+}
